@@ -7,6 +7,16 @@ menu "ZMK"
 
 menu "Basic Keyboard Setup"
 
+
+# 키네시스용 설정 공탕 추가
+config ZMK_HID_KEYBOARD_EXTENDED_REPORT
+    bool "Enable Extended HID Keyboard Report"
+    default n
+    help
+      Enable F13-F24 and international keys in NKRO
+
+
+
 config ZMK_KEYBOARD_NAME
     string "Keyboard Name"
 
@@ -320,9 +330,10 @@ config ZMK_RGB_UNDERGLOW_SPD_START
     int "RGB underglow start animation speed value"
     range 1 5
 
+# 키네시스용 범위를 3에서 4로 올림
 config ZMK_RGB_UNDERGLOW_EFF_START
     int "RGB underglow start effect int value related to the effect enum list"
-    range 0 3
+    range 0 4
 
 config ZMK_RGB_UNDERGLOW_ON_START
     bool "RGB underglow starts on by default"
