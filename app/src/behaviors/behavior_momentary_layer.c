@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#define DT_DRV_COMPAT zmk_behavior_momentary_layer
+#define DT_DRV_COMPAT zmk_bmo
 
 #include <zephyr/device.h>
 #include <drivers/behavior.h>
